@@ -12,7 +12,7 @@ export class ChatInboxComponent implements OnInit {
 
   socket;
   message: string;
-  messageList = [];
+  messageList = ['test message', 'test message 2'];
 
   constructor() { }
 
@@ -30,10 +30,13 @@ export class ChatInboxComponent implements OnInit {
  }
 
  SendMessage() {
+   if(this.message !== ''){
   this.socket.emit('message', this.message);
   this.messageList.push(this.message)
-console.log(this.messageList)
 
+  //messsage test
+console.log(this.messageList)
   this.message = '';
+   }
 }
 }
