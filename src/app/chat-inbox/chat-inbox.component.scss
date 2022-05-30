@@ -1,7 +1,7 @@
 .chat-messages-show-container{
     background: #020e34;
     height: 85vh;
-    width: 100vw;
+    width: 100%;
     display: flex;
     flex-direction: column;
     overflow: auto;
@@ -10,7 +10,7 @@
     list-style-type:none;
     margin: 0;
     padding: 0;
-    width: 90vw;
+    width: 90%   ;
  }
  .messages{
     background-color: #23c2cd;
@@ -19,20 +19,22 @@
     padding: 20px;
     margin: 2em;
     font-weight: bold;
-    border-radius: 25px;
+    border-radius: 8px;
  }
  .chat-messages-create-container{
+    width: 100%;
     background: #23c2cd;
     height: 100px;
     display: flex;
-    justify-content: center;
+    align-items: left;
  }
  .chat-messages-create-input {
     padding: 12px;
     margin: 29px 30px;
-    flex:2;
     border: none;
+    width: 100em;
     outline: none;
+    border-radius: 8px;
     &:focus{
       border: 2px solid #020e34;
     }
@@ -40,8 +42,17 @@
  .chat-messages-create-button {
     height: 50px;
     margin: auto 40px;
-    width: 100px;
+   border-radius: 8px;
+   padding: 10px 20px;
     background: #020e34;
     color: white;
     border: none;
+    font-weight: bold;
+    font-size: 20px;
  }
+ 
+ @media screen and (max-width: 700px){
+   .chat-messages-show-list{
+      width: 50vw;
+   }
+}

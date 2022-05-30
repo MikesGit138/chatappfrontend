@@ -2,12 +2,16 @@
     <div class="chat-messages-show-container">
       <ul class="chat-messages-show-list">
           <li *ngFor="let m of messageList" class="messages">
-              {{m}}
+                <div>
+                    <p>{{m.id}}</p>
+                    <p>{{m.message}}</p>
+                </div>
             </li>
       </ul>
+      <!-- <span *ngFor = 'let m of messageList' class="messages">{{m}}</span> -->
     </div>
     <div class="chat-messages-create-container"> 
       <input class="chat-messages-create-input" type="text" [(ngModel)]="message">
-      <button class="chat-messages-create-button" (click)="SendMessage()"> Send </button>
+      <button class="chat-messages-create-button" (click)="sendMessage()"> Send </button>
     </div>
  </div>
